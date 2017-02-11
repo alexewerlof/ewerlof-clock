@@ -14,9 +14,14 @@ function view() {
   const cy = height / 2;
   const r = Math.min(width, height) / 2;
   return m('svg', { width, height }, [
+    m('defs', [
+      m('filter', { id: 'shadow' }, [
+        m('feDropShadow', { dx: '0', dy: '0', stdDeviation: '2' })
+      ])
+    ]),
     m(face, { cx, cy, r }),
     m(minuteHand, { cx, cy, r }),
-    m(secondHand, { cx, cy, r }),
+    m(secondHand, { cx, cy, r, filterId: 'shadow' }),
   ]);
 }
 

@@ -5,6 +5,7 @@ rules:
   no-magic-numbers:
     - warn
     - ignore:
+      - 2
       - 6
       - 30
       - 60
