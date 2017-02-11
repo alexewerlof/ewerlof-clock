@@ -1,10 +1,9 @@
 'use strict';
 
-let intervalId;
+let intervalId, updateTimeCallback;
 let hour = 0;
 let minute = 0;
 let second = 0;
-let updateTimeCallback;
 
 function updateTime() {
   const now = new Date();

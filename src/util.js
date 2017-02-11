@@ -3,7 +3,7 @@
 const toRadians = (angle) => angle * Math.PI / 180;
 const toDegrees = (angle) => angle * 180 / Math.PI;
 
-const hour2deg = (h) => h * 30;
+const hour2deg = (hour) => hour * 30;
 
 const min2deg = (min) => min * 6;
 

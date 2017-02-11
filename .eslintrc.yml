@@ -1,1 +1,12 @@
 extends: userpixel/config/chrome-extension.js
+env:
+  commonjs: true
+rules:
+  no-magic-numbers:
+    - warn
+    - ignore:
+      - 6
+      - 30
+      - 60
+      - 180
+      - 1000
