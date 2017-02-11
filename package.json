@@ -1,0 +1,22 @@
+{
+  "name": "ewerlof-timer",
+  "version": "0.0.1",
+  "description": "A reimplementation of 1-click timer in Mithril",
+  "main": "app/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "build": "webpack",
+    "build-dev": "webpack --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "license": "GPL",
+  "dependencies": {
+    "mithril": "^1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.15.0",
+    "eslint-plugin-import": "^2.2.0",
+    "webpack": "^2.2.1"
+  }
+}
