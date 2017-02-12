@@ -8,4 +8,4 @@ const settings = require('./settings');
 
 document.body.style.backgroundColor = settings.color.bg;
 motor.ontick(m.redraw);
-m.mount(document.querySelector('#app'), clock);
+m.mount(document.body, clock);

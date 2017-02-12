@@ -1,0 +1,9 @@
+{
+  "name": "Ewerlof Clock",
+  "start_url": "Clock",
+  "description": "A clock made by Alex Ewerlöf",
+  "start_url": "index.html",
+  "background_color": "white",
+  "theme_color": "black",
+  "display": "fullscreen"
+}

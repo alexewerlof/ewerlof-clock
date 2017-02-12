@@ -10,18 +10,20 @@ const secondHand = require('./secondHand');
 const { perc } = require('../util');
 const { color } = require('../settings');
 
+const margin = 20;
+
 function view() {
-  const width = document.body.clientWidth;
-  const height = document.body.clientHeight;
+  const width = document.body.clientWidth - margin * 2;
+  const height = document.body.clientHeight - margin * 2;
   const cx = width / 2;
   const cy = height / 2;
   const r = Math.min(width, height) / 2;
-  return m('svg', { width, height }, [
+  return m('svg', { width, height, style: `margin:${margin}px` }, [
     m('defs', [
-      m('filter', { id: 'hourShadow', x: '-50%', y: '-50%', width: '200%', height: '200%' }, [
+      m('filter', { id: 'hourShadow', x: '-50%', y: '-50%', width: '200%', height: '200%', filterUnits: 'userSpaceOnUse' }, [
         m('feDropShadow', { dx: '0', dy: perc(r, 1), stdDeviation: '3', 'flood-color': color.shadow, 'flood-opacity': 0.5 })
       ]),
-      m('filter', { id: 'minuteShadow', x: '-50%', y: '-50%', width: '200%', height: '200%' }, [
+      m('filter', { id: 'minuteShadow', x: '-50%', y: '-50%', width: '200%', height: '200%', filterUnits: 'userSpaceOnUse' }, [
         m('feDropShadow', { dx: '0', dy: perc(r, 2), stdDeviation: '3', 'flood-color': color.shadow, 'flood-opacity': 0.5 })
       ]),
       m('filter', { id: 'secondShadow', x: '-50%', y: '-50%', width: '200%', height: '200%', filterUnits: 'userSpaceOnUse' }, [
