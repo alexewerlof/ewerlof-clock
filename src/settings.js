@@ -1,12 +1,17 @@
+/* eslint-disable no-magic-numbers */
+
 'use strict';
 
+const { rgb, gray } = require('./util');
+
 const color = {
-  bg: 'rgb(255, 95, 20)',
-  face: 'rgb(255, 95, 30)',
-  hour: 'rgb(255, 248, 237)',
-  minute: 'rgb(255, 248, 237)',
-  second: 'rgb(255, 248, 237)',
-  indicator: 'rgb(255, 248, 237)',
+  bg: gray(227),
+  face: gray(240),
+  hour: gray(60),
+  minute: gray(60),
+  second: rgb(213, 74, 62),
+  indicator: gray(60),
+  shadow: gray(30)
 };
 
 module.exports = { color };

@@ -1,7 +1,7 @@
 {
-  "name": "ewerlof-timer",
+  "name": "ewerlof-clock",
   "version": "0.0.1",
-  "description": "A reimplementation of 1-click timer in Mithril",
+  "description": "A clock made by Alex Ewerlöf",
   "main": "app/index.js",
   "scripts": {
     "lint": "eslint .",

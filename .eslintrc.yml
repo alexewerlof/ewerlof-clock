@@ -5,9 +5,10 @@ rules:
   no-magic-numbers:
     - warn
     - ignore:
-      - 2
+      - 2   # geometry
       - 6
       - 30
       - 60
+      - 100 # for percentage
       - 180
       - 1000

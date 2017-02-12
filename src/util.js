@@ -9,6 +9,10 @@ const min2deg = (min) => min * 6;
 
 const sec2deg = min2deg;
 
+const rgb = (r, g, b) => `rgb(${r}, ${g}, ${b})`;
+
+const gray = (g) => rgb(g, g, g);
+
 function computeXY(cx, cy, r, rotation) {
   return {
     x: cx + Math.sin(toRadians(rotation)) * r,
@@ -16,4 +20,10 @@ function computeXY(cx, cy, r, rotation) {
   };
 }
 
-module.exports = { toRadians, toDegrees, computeXY, hour2deg, min2deg, sec2deg };
+// Calculate percentage on an absolute value
+function perc(x, percentage, natural = false) {
+  const ret = x * percentage / 100;
+  return natural ? Math.round(ret) : ret;
+}
+
+module.exports = { toRadians, toDegrees, computeXY, hour2deg, min2deg, sec2deg, perc, rgb, gray };
