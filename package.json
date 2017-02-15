@@ -5,8 +5,13 @@
   "main": "app/index.js",
   "scripts": {
     "lint": "eslint .",
-    "build": "webpack",
+    "clean-build": "rm -rf build && mkdir build",
+    "copy-statics": "cp -v manifest.json index.html build/",
+    "build": "yarn run clean-build && yarn run copy-statics && webpack",
     "build-dev": "webpack --watch",
+    "deploy": "yarn run build && pushd build && scp -r . userpixel.com@ssh.userpixel.com:/www/ewerlof-clock && popd && yarn run cache-purge",
+    "cache-purge": "ssh userpixel.com@ssh.userpixel.com 'cache-purge www.userpixel.com/ewerlof-clock'",
+    "clean-deploy": "ssh userpixel.com@ssh.userpixel.com 'rm -rf /www/ewerlof-clock/*'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
