@@ -1,3 +1,5 @@
+![Logo](img/logo-144.png)
+
 # Intro
 
 This is a clock based on Mithril, Webpack 2 and yeah that's it! No JSX, no nothing basically!
