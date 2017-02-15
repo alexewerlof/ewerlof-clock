@@ -1,3 +1,5 @@
+'use strict';
+
 const packageJson = require('../package.json');
 
 const cacheName = `${packageJson.name}-${packageJson.version}`;
@@ -6,6 +8,9 @@ const filesToCache = [
   'index.js',
   'manifest.json',
   'service-worker.js',
+  'img/logo-32.png',
+  'img/logo-144.png',
+  'img/logo-192.png',
 ];
 
 self.addEventListener('install', function(e) {

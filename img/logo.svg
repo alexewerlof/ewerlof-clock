@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="pattern-0" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse" viewBox="0 0 100 100">
+      <path d="M 0 0 L 50 0 L 50 100 L 0 100 Z" style="fill: black;"/>
+    </pattern>
+  </defs>
+  <ellipse cx="251.763" cy="249.559" rx="230.421" ry="230.421" style="fill: rgb(234, 234, 234);"/>
+  <path d="M 368.515 199.774 L 241.63 263.218 L 238.986 57.028" style="fill: none; stroke-width: 31; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(181, 164, 155);"/>
+</svg>
